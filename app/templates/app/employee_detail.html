@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mr-3">
+        <div class="card mx-auto" style="width=100px" "height=150px">
+            </div>
+        <div>
+            {% if employee.photo %}
+              <img src="{{ employee.photo.url }}" alt="photo" class="card-img-top" width="100" height="350" object-fit:cover; border-radius: 8px;>
+            {% else %}
+              <p>No Photo Available</p>
+            {% endif %}
+
+        </div>
+        <div>
+            <p>{{employee.firstname}} {{employee.last_name}}</p>
+            <p>{{employee.designation}}</p>
+            <p>{{employee.email_address}}</p>
+            <p>{{employee.phone_number}}</p>
+        </div>
+    </div>
+    
+</body>
+</html>
